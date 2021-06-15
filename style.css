@@ -11,6 +11,10 @@ h1 {
     font-weight: 300;
 }
 
+span {
+    font-family:"Times New Roman", Times, serif;
+}
+
 a:link,
 a:visited {
     color: #175e94;
