@@ -32,7 +32,7 @@
 
 
     <h1 align=center>Abstract</h1>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     Learning from visual data opens the potential to accrue a large range of manipulation behaviors by 
         leveraging human demonstrations without specifying each of them mathematically, 
         but rather through natural task specification. In this paper, we present Learning by Watching (LbW), 
@@ -48,7 +48,7 @@
     <br><br>
     <img src="data/goal.gif" alt="LbW Overview Image" style="width:50%;margin: auto;display: block;">
     <br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     The resulting keypoint-based representations provide semantically meaningful information that can be directly used for 
         reward computing and policy learning. We evaluate the effectiveness of our approach on five robot manipulation tasks, 
         including reaching, pushing, sliding, coffee making, and drawer closing. Detailed experimental evalu- ations demonstrate 
@@ -59,17 +59,17 @@
     <hr>
     
     <h1 align=center>Motivation</h1>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     In robotic imitation learning, collecting expert demonstrations remains expensive and challenging as it assumes access to both 
         observations and actions. We aim to relax this expert supervision to human videos alone.
     </span>
     <br><br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     To bridge the human-robot domain gap, one way is to translate the human videos to the robot domain using a generative 
         modeling approach. However, translation is generally imperfect.
     </span>    
     <br><br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     Our key insight: explicitly exploiting the kinematics and motion information embedded in the video to learn structured 
         representations via translation and unsupervised keypoint detection.
     </span>
@@ -78,15 +78,15 @@
     <hr>
     
     <h1 align=center>Contribution</h1>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     1) We propose a perception module for physical imitation from human videos using human to robot translation and unsupervised keypoint detection.
     </span>
     <br><br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     2) The resulting keypoint-based representations can be used to compute the task reward with a simple distance metric.
     </span>    
     <br><br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     3) Experimental results on five robot manipulation tasks show that our method greatly outperforms previous works。
     </span>
     <br><br>
@@ -94,7 +94,6 @@
     <hr>
     
     <h1 align=center>Method</h1>
-    <br>
     <img src="data/Lbw.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
     <br>
     <span style="font-size:20px" align=left font-family: arial>
@@ -112,10 +111,9 @@
     <hr>
         
     <h1 align=center>Qualitative Results</h1>
-    <br>
     <img src="data/table.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
     <br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     To verify the effectiveness of our perception module fairly, we implement two baselines using the same control model as LbW, 
         but different reward learning methods. we use success rate as the metric to compare our method with the baselines. At 
         test time, the task is considered to be a success if the robot is able to complete the task within a specified number of 
@@ -124,7 +122,7 @@
     <br><br>
     <img src="data/precep.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
     <br>
-    <span style="font-size:20px" align=left font-family: arial>
+    <span style="font-size:20px" align=left>
     Given a human video as input in the first row, we present the translated images of CycleGAN in the second row. In the third 
         row, we visualize our translated images and the detected keypoints produced by the perception module. Our perception module 
         accurately detects the robot arm pose and the location of the interacting object.
