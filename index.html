@@ -77,6 +77,63 @@
     
     <hr>
     
+    <h1 align=center>Contribution</h1>
+    <span style="font-size:20px" align=left font-family: arial>
+    1) We propose a perception module for physical imitation from human videos using human to robot translation and unsupervised keypoint detection.
+    </span>
+    <br><br>
+    <span style="font-size:20px" align=left font-family: arial>
+    2) The resulting keypoint-based representations can be used to compute the task reward with a simple distance metric.
+    </span>    
+    <br><br>
+    <span style="font-size:20px" align=left font-family: arial>
+    3) Experimental results on five robot manipulation tasks show that our method greatly outperforms previous works。
+    </span>
+    <br><br>
+    
+    <hr>
+    
+    <h1 align=center>Method</h1>
+    <br>
+    <img src="data/Lbw.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
+    <br>
+    <span style="font-size:20px" align=left font-family: arial>
+    Our LbW model is composed of three main components: an image-to-image translation network T, a keypoint detector Ψ, and a 
+        policy network π. The image-to-image translation network translates the input human demonstration video frame by frame 
+        to generate a robot demonstration video. Next, the keypoint detector takes the generated robot demonstration video as 
+        input and extracts the keypoint-based representation for each frame to form a keypoints trajectory. At each time step, 
+        the keypoint detector also extracts the keypoint-based representation for the current observation. The reward for physical 
+        imitation is defined by a distance metric d that measures the distance between the keypoint-based representation of the 
+        current observation and those in the keypoints trajectory. Finally, the keypoint-based representation of the current 
+        observation are passed to the policy network to predict an action that is used to interact with the environment.
+    </span>
+    <br><br>
+    
+    <hr>
+        
+    <h1 align=center>Qualitative Results</h1>
+    <br>
+    <img src="data/table.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
+    <br>
+    <span style="font-size:20px" align=left font-family: arial>
+    To verify the effectiveness of our perception module fairly, we implement two baselines using the same control model as LbW, 
+        but different reward learning methods. we use success rate as the metric to compare our method with the baselines. At 
+        test time, the task is considered to be a success if the robot is able to complete the task within a specified number of 
+        time steps. The results are evaluated by 10 test episodes for each task.
+    </span>
+    <br><br>
+    <img src="data/precep.png" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
+    <br>
+    <span style="font-size:20px" align=left font-family: arial>
+    Given a human video as input in the first row, we present the translated images of CycleGAN in the second row. In the third 
+        row, we visualize our translated images and the detected keypoints produced by the perception module. Our perception module 
+        accurately detects the robot arm pose and the location of the interacting object.
+    </span>
+    <br><br>
+    <img src="data/tasks.gif" alt="LbW Method Image" style="width:100%;margin: auto;display: block;">
+    
+    <br><br><br>
+    
     
 
 </html>
